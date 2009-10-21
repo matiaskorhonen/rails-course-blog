@@ -1,30 +1,4 @@
-h1. Rails Course Blog
-
-You probably don't want this unless you attended the Rails Course at Haaga-Helia.
-
-Feel free to have a look, if you think it will help you.
-
-
-h2. Contents
-
-A simple Rails blog with:
-
-* Posts
-* Comments
-* Users
-* Authentication/Authorization
-* Sessions
-
-
-h2. Setup
-
-Just run rake db:schema:load to get started.
-
-New users have to be added through script/console.
-
-h2. License
-
-All content here is licensed under the MIT License.
+The MIT License
 
 Copyright (c) 2009 Joao Cardoso, Matias Korhonen
 
