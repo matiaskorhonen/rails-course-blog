@@ -1,0 +1,12 @@
+config/database.yml
+db/*.sqlite3
+db/*.sqlite
+log/*.log
+tmp/*
+.DS_Store
+.svn
+.loadpath
+.project
+.*.swp
+public/tmp
+*.kpf
