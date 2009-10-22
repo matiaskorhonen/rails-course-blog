@@ -19,8 +19,14 @@ ActiveRecord::Schema.define(:version => 20091022115500) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'reference' for column 'user'
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "published"
+    t.integer  "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

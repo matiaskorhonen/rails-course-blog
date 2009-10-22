@@ -51,7 +51,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.xml
   def create
-    @post = Post.new(params[:post])
+    @user = User.find(session[:user_id])
+    @post = @user.posts.new(params[:post])
 
     respond_to do |format|
       if @post.save
