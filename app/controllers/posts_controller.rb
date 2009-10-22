@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all.reverse
+    if session[:user_id].nil? # If not logged in
+      @posts = Post.all_published
+    else # If logged in
+      @posts = Post.all.reverse
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,8 +23,12 @@ class PostsController < ApplicationController
     @comments = @post.comments
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @post }
+      if session[:user_id].nil? && !@post.published? # If not logged in
+        raise ActiveRecord::RecordNotFound
+      else
+        format.html # show.html.erb
+        format.xml  { render :xml => @post }
+      end
     end
   end
 
