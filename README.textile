@@ -1,6 +1,6 @@
 h1. Rails Course Blog
 
-You probably don't want this unless you attended the Rails Course at Haaga-Helia.
+You probably *don't* want this unless you attended the Rails Course at Haaga-Helia.
 
 Feel free to have a look, if you think it will help you.
 
